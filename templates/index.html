@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lazada Reviews</title>
+</head>
+<body>
+    <h1>Lazada Reviews</h1>
+    <form method="POST">
+        <label for="url">Enter Lazada Product URL:</label>
+        <input type="text" name="url" id="url" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if error %}
+        <p style="color:red;">{{ error }}</p>
+    {% endif %}
+
+    {% if item_id %}
+        <h2>Extracted Item ID: {{ item_id }}</h2>
+    {% endif %}
+
+    {% if reviews %}
+        <h3>Reviews:</h3>
+        <ul>
+            {% for review in reviews %}
+                <li>
+                    <strong>Rating: {{ review.rating }}</strong>
+                    <p>{{ review.content }}</p>
+                    <p><em>Sentiment: {{ review.sentiment }}</em></p>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    {% if urls %}
+        <h3>URLs used to request reviews:</h3>
+        <ul>
+            {% for url in urls %}
+                <li>{{ url }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>

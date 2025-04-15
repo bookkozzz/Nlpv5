@@ -1,0 +1,12 @@
+<div class="warnning-text">
+                  Sorry, we have detected unusual traffic from your network.
+                </div>
+
+<div id="nc_1__scale_text" class="scale_text slidetounlock"><span class="nc-lang-cnt" data-nc-lang="SLIDE">Please slide to verify</span></div>
+
+lasted update ดึงผ่าน api ได้แล้ว  https://my.lazada.co.th/pdp/review/getReviewList?itemId=224504567&pageSize=5&filter=5&sort=0&pageNo=0
+filter=5 จะดึงรีวิวที่มีคะแนน 5 ดาว
+
+filter=4 จะดึงรีวิวที่มีคะแนน 4 ดาว
+
+filter=3 จะดึงรีวิวที่มีคะแนน 3 ดาว
